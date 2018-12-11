@@ -45,7 +45,7 @@ public class Agenda {
 		return null;
 	}
 	
-	public void remove(int id) {
+	public void remove(int id) throws ContatoNotFoundException{
 		boolean remove = false;
 		Contato c = pesquisaPorId(id);
 		
@@ -53,7 +53,7 @@ public class Agenda {
 		if (remove) {
 			System.out.println("Contato de id " + id + " removido!!!\n");
 		} else {
-			throw new ContatoNotFoundException("Contato não encontrado");
+			throw new ContatoNotFoundException("Contato não encontrado!!!!!\n");
 		}
 	}
 	
@@ -61,7 +61,7 @@ public class Agenda {
 		ComparatorId comparator = new ComparatorId();
 		ArrayList<Contato> arrayListAgenda = hashToArraylist(contatos);
 		Collections.sort(arrayListAgenda, comparator);
-		
+		System.out.println("-----------------------------------------");
 		System.out.println("CONTATOS: \n");
 		for (Contato c : arrayListAgenda) {
 			System.out.println(c);
@@ -73,7 +73,7 @@ public class Agenda {
 		ComparatorNome comparator = new ComparatorNome();
 		ArrayList<Contato> arrayListAgenda = hashToArraylist(contatos);
 		Collections.sort(arrayListAgenda, comparator);
-		
+		System.out.println("-----------------------------------------");
 		System.out.println("CONTATOS: \n");
 		for (Contato c : arrayListAgenda) {
 			System.out.println(c);

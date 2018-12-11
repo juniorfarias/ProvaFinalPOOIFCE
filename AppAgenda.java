@@ -19,9 +19,20 @@ public class AppAgenda {
 		agenda.atualizarContatoPorEmail(3, "ce@hotmail.com");
 		agenda.atualizarContatoPorNome(4, "Elisângela");
 		agenda.atualizarContatoPorTelefone(1, "999938109");
-		agenda.remove(8);
-		agenda.listaPorId();		
-		agenda.remove(0);
+		try {
+			agenda.remove(0);
+			
+		}catch(ContatoNotFoundException e) {
+			System.out.println(e.getMessage());
+		}
+		agenda.listaPorId();
+		
+		try {
+			agenda.remove(8);
+			
+		}catch(ContatoNotFoundException e) {
+			System.out.println(e.getMessage());
+		}
 	}
 
 }

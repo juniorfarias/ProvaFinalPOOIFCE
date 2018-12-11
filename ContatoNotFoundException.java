@@ -1,6 +1,6 @@
 package ProvaFinal;
 
-public class ContatoNotFoundException extends NullPointerException {
+public class ContatoNotFoundException extends Exception {
 	private static final long serialVersionUID = 1L;
 
 	ContatoNotFoundException() {

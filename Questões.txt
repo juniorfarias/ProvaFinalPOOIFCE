@@ -1,0 +1,21 @@
+Prova POO-> Agenda
+
+-Contato
+-->ID:int
+-->nome:String
+-->telefone:String
+-->email:String
+
+-CRUD
+
+-Listagem classificada
+-->Usando "comparator"
+-->Listar por nome e id
+
+-Estrutura de Dados
+-->HashSet
+
+-Exceção:
+-->Método remove: gera uma exceção "ContatoNotFound"
+-Questão bonus(+1)
+-->Salvar código no github
